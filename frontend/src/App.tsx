@@ -1,22 +1,21 @@
+import DataTable from 'components/DataTable';
+import Footer from 'components/Footer';
+import NavBar from 'components/Navbar';
 import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <h1>Hello World</h1>
-        </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <NavBar />
+      <div className="container">
+        <h1 className="text-primary">Hello World</h1>
+      </div>
+      <DataTable />
+      <Footer />
+    </>
+
+
   );
 }
 
