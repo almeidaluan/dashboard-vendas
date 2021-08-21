@@ -23,6 +23,11 @@ public class Sale {
     @JoinColumn(name = "seller_id")
     private Seller seller;
 
+    public Sale(){
+
+    }
+
+
     public Long getId() {
         return id;
     }
@@ -67,4 +72,7 @@ public class Sale {
         return seller;
     }
 
+    public void setSeller(Seller seller) {
+        this.seller = seller;
+    }
 }

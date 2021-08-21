@@ -13,12 +13,20 @@ public class Seller {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "seller") // Um vendedor tem muitas vendas
+
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "seller") // Um vendedor tem muitas vendas
     private List<Sale> sales = new ArrayList<>();
 
+    public Seller(){
+
+    }
 
     public List<Sale> getSales() {
         return sales;
+    }
+
+    public void setSales(List<Sale> sales) {
+        this.sales = sales;
     }
 
     public Long getId() {
